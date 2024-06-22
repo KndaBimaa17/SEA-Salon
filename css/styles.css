@@ -2,6 +2,7 @@
   --primary: rgb(44, 44, 44);
   --light: #fff;
   --dark: #000;
+  --accent: #77804e;
 }
 
 * {
@@ -13,11 +14,12 @@
   border: none;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
-  ::-webkit-scrollbar {
-    height: 0;
-    width: 0;
-  }
   color: var(--light);
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 nav {
@@ -88,7 +90,7 @@ section:nth-child(even) {
   padding: 1rem 2rem;
   font-size: 1.4rem;
   color: var(--light);
-  background-color: rgb(119, 126, 68);
+  background-color: var(--accent);
   font-family: "Playfair Display", serif;
   border-radius: 0.5rem;
   box-shadow: 1px 2px 3px rgb(116, 116, 116);
@@ -297,6 +299,95 @@ section:nth-child(even) {
 .info-item svg {
   margin-right: 10px;
 }
+
+/* Reviews Section */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+#reviews h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.review-list {
+  margin-bottom: 2rem;
+}
+
+.review-item {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+}
+
+.review-item:last-child {
+  border-bottom: none;
+}
+
+.review-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.review-item p {
+  margin: 0.5rem 0;
+}
+
+.review-item .rating {
+  color: var(--primary-color);
+}
+
+.review-form {
+  background: var(--white);
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #000;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border: 3px solid var(--accent);
+}
+
+button {
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: darken(var(--primary-color), 10%);
+}
+
 
 footer {
   padding: 1rem 2rem;
