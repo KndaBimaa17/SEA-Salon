@@ -62,5 +62,3 @@ The contact form includes basic validation to ensure that the name, email, and m
 - The contact section includes a form with fields for the user's name, email, and message, which are validated before submission.
 
 ---
-
-Feel free to adjust any sections or details as needed to better reflect the specifics of your project.
