@@ -1,0 +1,306 @@
+:root {
+  --primary: rgb(44, 44, 44);
+  --light: #fff;
+  --dark: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  ::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+  color: var(--light);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 3rem 6%;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  justify-content: space-between;
+  position: fixed;
+  font-size: 1.6rem;
+  z-index: 100;
+}
+
+.navbar-logo {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.navbar-nav a {
+  margin-inline: 10px;
+}
+
+section:nth-child(odd) {
+  min-height: 100vh;
+  padding: 8rem 6% 0;
+  background-color: var(--primary);
+  width: 100%;
+}
+
+section:nth-child(even) {
+  background-color: #888;
+  min-height: 100vh;
+  padding: 8rem 6% 0;
+  width: 100%;
+}
+
+.hero-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-right img {
+  height: 700px;
+  width: 700px;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  z-index: 10;
+  filter: drop-shadow(1px 1px 10px blue);
+}
+
+.hero-txt {
+  padding: 5rem 0 0;
+  width: 100%;
+}
+
+.hero-p {
+  font-size: 6rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.hero-cta {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  color: var(--light);
+  background-color: rgb(119, 126, 68);
+  font-family: "Playfair Display", serif;
+  border-radius: 0.5rem;
+  box-shadow: 1px 2px 3px rgb(116, 116, 116);
+}
+
+.hero-cta:hover {
+  transform: scale(1.1);
+  background-color: rgba(119, 126, 68, 0.3);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+#services {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100vh;
+  vertical-align: middle;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px;
+}
+
+.content {
+  text-align: center;
+}
+
+.content h5 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+.content h2 {
+  margin: 10px 0;
+  font-size: 36px;
+}
+
+.content p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid white;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.pagination {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Contact Section */
+.contact-container {
+  width: 1600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+}
+
+.column {
+  flex: 1 1 30%;
+  min-width: 600px;
+}
+
+.card {
+  background-color: #104579;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.card-body h3 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.form-group .invalid-feedback {
+  display: none;
+  color: red;
+  font-size: 0.875em;
+}
+
+#contactForm {
+  height: 400px;
+}
+
+#contactForm button {
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.info-item svg {
+  margin-right: 10px;
+}
+
+footer {
+  padding: 1rem 2rem;
+  background-color: #000;
+  color: var(--light);
+  text-align: center;
+}
